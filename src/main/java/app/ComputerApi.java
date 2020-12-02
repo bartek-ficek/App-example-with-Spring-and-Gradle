@@ -21,14 +21,14 @@ public class ComputerApi {
         computers.add(computer2);
     }
 
-    @GetMapping("/api/computer/get")
+    @GetMapping("/api/computers")
     public List<Computer> getComputers() {
         return computers;
     }
 
-    @PostMapping("/api/computer/add")
+    @PostMapping("/api/computers")
     public void addComputer(@RequestBody Computer computer){
+        computers.add(computer);
     }
 }
-
 
