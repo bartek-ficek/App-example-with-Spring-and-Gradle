@@ -1,6 +1,7 @@
 package app;
 
 public class Computer {
+    private Long id;
     private String ddrType;
     private long Mhz;
     private int memorySize;
@@ -8,10 +9,19 @@ public class Computer {
     public Computer() {
     }
 
-    public Computer(String ddrType, long mhz, int memorySize) {
+    public Computer(Long id, String ddrType, long mhz, int memorySize) {
+        this.id = id;
         this.ddrType = ddrType;
-        Mhz = mhz;
+        this.Mhz = mhz;
         this.memorySize = memorySize;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDdrType() {
@@ -41,9 +51,11 @@ public class Computer {
     @Override
     public String toString() {
         return "Computer{" +
-                "ddrType='" + ddrType + '\'' +
+                "Id=" + id +
+                ", ddrType='" + ddrType + '\'' +
                 ", Mhz=" + Mhz +
                 ", memorySize=" + memorySize +
                 '}';
     }
 }
+
